@@ -5,8 +5,10 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/kagaw/Documents/Unreal Projects/ASG02_GroupProject/GalaxianClone/Content/LevelAssets/LevelInfinite.umap",
-				"C:/Users/kagaw/Documents/Unreal Projects/ASG02_GroupProject/GalaxianClone/Content/Maps/LevelInfinite.umap"
+				"C:/Users/kagaw/Documents/Unreal Projects/ASG02_GroupProject/GalaxianClone/Content/Maps/LevelInfinite.umap",
+				"C:/Users/kagaw/Documents/Unreal Projects/ASG02_GroupProject/GalaxianClone/Content/Blueprints/Game_Over_Widget_BP.uasset",
+				"C:/Users/kagaw/Documents/Unreal Projects/ASG02_GroupProject/GalaxianClone/Content/Blueprints/P_Character/Player.uasset",
+				"C:/Users/kagaw/Documents/Unreal Projects/ASG02_GroupProject/GalaxianClone/Content/LevelAssets/LevelInfinite.umap"
 			]
 		}
 	]
