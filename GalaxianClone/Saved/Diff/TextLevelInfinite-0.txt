@@ -1,0 +1,6 @@
+Begin Map
+   Begin Level
+   End Level
+Begin Surface
+End Surface
+End Map
