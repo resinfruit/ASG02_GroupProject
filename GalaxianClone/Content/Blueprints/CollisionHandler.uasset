@@ -1,0 +1,75 @@
+{
+    "Blueprint": {
+        "Name": "CollisionHandler",
+        "Variables": [
+            {
+                "Name": "IsColliding",
+                "Type": "bool",
+                "DefaultValue": false
+            },
+            {
+                "Name": "EnemyShipReference",
+                "Type": "Actor",
+                "DefaultValue": null
+            }
+        ],
+        "Functions": [
+            {
+                "Name": "HandleCollision",
+                "Inputs": [
+                    {
+                        "Name": "OtherActor",
+                        "Type": "Actor"
+                    }
+                ],
+                "Logic": [
+                    {
+                        "If": {
+                            "Condition": "OtherActor != null",
+                            "Then": [
+                                {
+                                    "SetVariable": {
+                                        "Name": "IsColliding",
+                                        "Value": true
+                                    }
+                                },
+                                {
+                                    "SetVariable": {
+                                        "Name": "EnemyShipReference",
+                                        "Value": "OtherActor"
+                                    }
+                                },
+                                {
+                                    "CallFunction": {
+                                        "Name": "OnCollisionDetected",
+                                        "Inputs": []
+                                    }
+                                }
+                            ],
+                            "Else": [
+                                {
+                                    "SetVariable": {
+                                        "Name": "IsColliding",
+                                        "Value": false
+                                    }
+                                },
+                                {
+                                    "SetVariable": {
+                                        "Name": "EnemyShipReference",
+                                        "Value": null
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "EventDispatchers": [
+            {
+                "Name": "OnCollisionDetected",
+                "Inputs": []
+            }
+        ]
+    }
+}

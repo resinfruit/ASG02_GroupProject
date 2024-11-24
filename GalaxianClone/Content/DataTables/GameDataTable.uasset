@@ -1,0 +1,17 @@
+{
+    "DataTable": {
+        "Name": "GameDataTable",
+        "Entries": [
+            {
+                "Name": "PlayerScore",
+                "Type": "int",
+                "DefaultValue": 0
+            },
+            {
+                "Name": "PlayerLives",
+                "Type": "int",
+                "DefaultValue": 3
+            }
+        ]
+    }
+}

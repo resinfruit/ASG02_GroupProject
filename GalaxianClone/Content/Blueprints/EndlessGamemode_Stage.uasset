@@ -1,0 +1,89 @@
+{
+    "Blueprint": {
+        "Name": "EndlessGamemode_Stage",
+        "Variables": [
+            {
+                "Name": "PlayerLives",
+                "Type": "int",
+                "DefaultValue": 3
+            },
+            {
+                "Name": "Score",
+                "Type": "int",
+                "DefaultValue": 0
+            },
+            {
+                "Name": "GameOver",
+                "Type": "bool",
+                "DefaultValue": false
+            }
+        ],
+        "Functions": [
+            {
+                "Name": "OnPlayerHit",
+                "Inputs": [],
+                "Logic": []
+            },
+            {
+                "Name": "OnEnemyHit",
+                "Inputs": [],
+                "Logic": []
+            },
+            {
+                "Name": "RestartGame",
+                "Inputs": [],
+                "Logic": []
+            }
+        ],
+        "FunctionCalls": [
+            {
+                "FunctionName": "IncrementScore",
+                "Library": "GameLogicLibrary",
+                "Inputs": [
+                    {
+                        "Name": "CurrentScore",
+                        "Value": "Score"
+                    }
+                ],
+                "Outputs": [
+                    {
+                        "Name": "Score",
+                        "Value": "UpdatedScore"
+                    }
+                ]
+            },
+            {
+                "FunctionName": "DecreasePlayerLives",
+                "Library": "GameLogicLibrary",
+                "Inputs": [
+                    {
+                        "Name": "PlayerLives",
+                        "Value": "PlayerLives"
+                    }
+                ],
+                "Outputs": [
+                    {
+                        "Name": "PlayerLives",
+                        "Value": "UpdatedLives"
+                    }
+                ]
+            },
+            {
+                "FunctionName": "IsGameOver",
+                "Library": "GameLogicLibrary",
+                "Inputs": [
+                    {
+                        "Name": "PlayerLives",
+                        "Value": "PlayerLives"
+                    }
+                ],
+                "Outputs": [
+                    {
+                        "Name": "GameOver",
+                        "Value": "GameOver"
+                    }
+                ]
+            }
+        ]
+    }
+}

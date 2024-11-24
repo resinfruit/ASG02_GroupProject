@@ -1,0 +1,63 @@
+{
+    "Blueprint": {
+        "Name": "GameStateManager",
+        "Variables": [
+            {
+                "Name": "PlayerLives",
+                "Type": "int",
+                "DefaultValue": 3
+            },
+            {
+                "Name": "Score",
+                "Type": "int",
+                "DefaultValue": 0
+            },
+            {
+                "Name": "GameOver",
+                "Type": "bool",
+                "DefaultValue": false
+            }
+        ],
+        "Functions": [
+            {
+                "Name": "OnPlayerHit",
+                "Inputs": [],
+                "Logic": []
+            },
+            {
+                "Name": "OnEnemyHit",
+                "Inputs": [],
+                "Logic": []
+            },
+            {
+                "Name": "RestartGame",
+                "Inputs": [],
+                "Logic": []
+            }
+        ],
+        "EventDispatchers": [
+            {
+                "Name": "OnPlayerLivesChanged",
+                "Inputs": [
+                    {
+                        "Name": "NewLives",
+                        "Type": "int"
+                    }
+                ]
+            },
+            {
+                "Name": "OnScoreChanged",
+                "Inputs": [
+                    {
+                        "Name": "NewScore",
+                        "Type": "int"
+                    }
+                ]
+            },
+            {
+                "Name": "OnGameOver",
+                "Inputs": []
+            }
+        ]
+    }
+}

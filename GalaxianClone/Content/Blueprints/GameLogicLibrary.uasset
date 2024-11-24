@@ -1,0 +1,54 @@
+{
+    "BlueprintFunctionLibrary": {
+        "Functions": [
+            {
+                "Name": "IncrementScore",
+                "Inputs": [
+                    {
+                        "Name": "CurrentScore",
+                        "Type": "int"
+                    }
+                ],
+                "Outputs": [
+                    {
+                        "Name": "UpdatedScore",
+                        "Type": "int"
+                    }
+                ],
+                "Logic": "UpdatedScore = CurrentScore + 1"
+            },
+            {
+                "Name": "DecreasePlayerLives",
+                "Inputs": [
+                    {
+                        "Name": "PlayerLives",
+                        "Type": "int"
+                    }
+                ],
+                "Outputs": [
+                    {
+                        "Name": "UpdatedLives",
+                        "Type": "int"
+                    }
+                ],
+                "Logic": "UpdatedLives = PlayerLives - 1"
+            },
+            {
+                "Name": "IsGameOver",
+                "Inputs": [
+                    {
+                        "Name": "PlayerLives",
+                        "Type": "int"
+                    }
+                ],
+                "Outputs": [
+                    {
+                        "Name": "GameOver",
+                        "Type": "bool"
+                    }
+                ],
+                "Logic": "GameOver = PlayerLives <= 0"
+            }
+        ]
+    }
+}
